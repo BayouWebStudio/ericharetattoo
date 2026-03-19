@@ -1,499 +1,377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eric Hare — Geometric Tattoo Artist | San Diego, CA</title>
-  <meta name="description" content="Eric Hare is a geometric tattoo artist in San Diego, CA, specializing in sacred geometry, mandalas, dotwork, and precision line work." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric Hare &#x2014; Tattoo Artist | San Diego, California</title>
+  <meta name="description" content="Eric Hare is a tattoo artist based in San Diego, California specializing in Geometr&#xed;a Sagrada. Tatuajes que cuentan tu historia. Basado en San Diego, California.">
+  <link rel="canonical" href="https://bayouwebstudio.github.io/ericharetattoo/">
+  <meta property="og:title" content="Eric Hare &#x2014; Tattoo Artist">
+  <meta property="og:description" content="Tatuajes que cuentan tu historia. Basado en San Diego, California.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/BayouWebStudio/ericharetattoo/main/img/1.jpg">
+  <meta property="og:url" content="https://bayouwebstudio.github.io/ericharetattoo/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Eric Hare",
+    "jobTitle": "Tattoo Artist",
+    "url": "https://bayouwebstudio.github.io/ericharetattoo/",
+    "sameAs": ["https://www.instagram.com/ericharetattoo"],
+    "address": { "@type": "PostalAddress", "addressLocality": "San Diego, California", "addressCountry": "US" }
+  }
+  </script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
     :root {
-      --bg: #080808;
-      --gold: #c9a84c;
-      --gold-light: #dbbf6e;
-      --white: #ffffff;
-      --gray: #aaaaaa;
-      --border: rgba(201,168,76,0.25);
+      --black: #0a0a0a;
+      --charcoal: #141414;
+      --gold: #C9A84C;
+      --white: #f5f5f0;
+      --dim: #888;
+      --border: rgba(255,255,255,0.07);
     }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      background: var(--bg);
+      background: var(--black);
       color: var(--white);
       font-family: 'Inter', sans-serif;
       font-weight: 300;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; width: 100%; height: 100%; object-fit: cover; }
-
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 1.25rem 4rem;
-      background: rgba(8,8,8,0.92);
+      padding: 20px 48px;
+      background: rgba(10,5,5,0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
     .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      color: var(--gold);
-    }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-    .nav-links a {
-      font-size: 0.8125rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
       font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links a {
+      color: var(--dim);
+      text-decoration: none;
+      font-size: 0.75rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--gray);
-      transition: color 0.3s;
+      transition: color 0.2s;
     }
-    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .lang-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--dim);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-toggle:hover { border-color: var(--gold); color: var(--gold); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 1px; background: var(--white); margin: 5px 0; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+    .mobile-menu {
+      display: none; position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
+      background: var(--charcoal); padding: 24px 48px; border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; color: var(--white); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    /* FLOATING BOOK */
+    .book-float {
+      position: fixed; bottom: 32px; right: 32px; z-index: 200;
+      background: var(--gold); color: #000;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      text-decoration: none; padding: 14px 22px; border-radius: 2px;
+      box-shadow: 0 4px 24px rgba(201,168,76,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .book-float:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
+    /* FADE-UP ANIMATIONS */
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    /* FOOTER */
+    footer {
+      background: var(--charcoal); padding: 48px 72px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-logo { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--dim); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--dim); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { color: var(--dim); font-size: 0.72rem; }
+    /* SHARED */
+    .section-label { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400; line-height: 1.1; margin-bottom: 24px;
+    }
+    .btn-gold {
+      display: inline-block; background: var(--gold); color: #000;
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 16px 40px;
+      transition: opacity 0.2s;
+    }
+    .btn-gold:hover { opacity: 0.88; }
+    .btn-outline {
+      display: inline-block; border: 1px solid var(--border); color: var(--white);
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 14px 36px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    /* MOBILE */
+    @media (max-width: 900px) {
+      nav { padding: 18px 24px; } .nav-links { display: none; } .hamburger { display: block; }
+      footer { flex-direction: column; gap: 24px; padding: 40px 24px; text-align: center; }
+    }
+    @media (max-width: 600px) {
+      footer { padding: 32px 20px; }
+    }
+  
     /* HERO */
     .hero {
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      padding: 0 2rem;
+      min-height: 100vh; display: flex; align-items: flex-end;
+      padding: 0 72px 80px; position: relative; overflow: hidden;
     }
     .hero-bg {
       position: absolute; inset: 0;
-      background: linear-gradient(135deg, #0d0d0d 0%, #080808 50%, #0a0a08 100%);
+      background-image: url('img/1.jpg');
+      background-size: cover; background-position: center top;
+      filter: brightness(0.42); transform: scale(1.02);
     }
-    .hero-bg::after {
-      content: '';
+    .hero-gradient {
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 60%, rgba(201,168,76,0.08) 0%, transparent 70%);
+      background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.15) 55%, transparent 100%);
     }
-    .hero-geo {
-      position: absolute; inset: 0;
-      background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.04) 59px, rgba(201,168,76,0.04) 60px),
-        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.04) 59px, rgba(201,168,76,0.04) 60px);
+    .hero-content { position: relative; z-index: 2; max-width: 700px; }
+    .hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 300; line-height: 0.95; letter-spacing: -0.01em; margin-bottom: 20px;
     }
-    .hero-content { position: relative; z-index: 1; max-width: 780px; }
-    .hero-eyebrow {
-      font-size: 0.75rem;
-      font-weight: 400;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
+    .hero-sub { font-size: 0.92rem; color: var(--dim); letter-spacing: 0.06em; margin-bottom: 40px; max-width: 480px; line-height: 1.7; }
+    .hero-cta {
+      display: inline-block; border: 1px solid var(--gold); color: var(--gold);
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 14px 32px; transition: background 0.2s, color 0.2s;
     }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 7vw, 6rem);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-      margin-bottom: 1.5rem;
-    }
-    .hero h1 span { color: var(--gold); }
-    .hero-sub {
-      font-size: 1.0625rem;
-      color: var(--gray);
-      max-width: 520px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.8;
-    }
-    .btn {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.875rem 2.25rem;
-      font-size: 0.8125rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      transition: all 0.3s;
-      cursor: pointer;
-    }
-    .btn-gold {
-      background: var(--gold);
-      color: #080808;
-      border: 1px solid var(--gold);
-    }
-    .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
-    .btn-outline {
-      background: transparent;
-      color: var(--gold);
-      border: 1px solid var(--gold);
-    }
-    .btn-outline:hover { background: rgba(201,168,76,0.1); }
-    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-    /* SECTIONS */
-    section { padding: 7rem 4rem; }
-    .section-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 600;
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
-    }
-    .section-sub {
-      font-size: 1rem;
-      color: var(--gray);
-      max-width: 560px;
-      line-height: 1.8;
-    }
-    .divider {
-      width: 48px; height: 1px;
-      background: var(--gold);
-      margin: 1.5rem 0;
-    }
-
+    .hero-cta:hover { background: var(--gold); color: #000; }
+    .social-row { display: flex; gap: 16px; margin-top: 32px; }
+    .social-row a { color: var(--dim); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
+    .social-row a:hover { color: var(--gold); }
     /* ABOUT PREVIEW */
-    .about-preview {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .about-img-wrap {
-      position: relative;
-      aspect-ratio: 3/4;
-      overflow: hidden;
-    }
-    .about-img-wrap::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border: 1px solid var(--border);
-      z-index: 1;
-    }
-    .about-img-wrap::after {
-      content: '';
-      position: absolute;
-      bottom: -12px; right: -12px;
-      width: 100%; height: 100%;
-      border: 1px solid var(--border);
-      z-index: 0;
-    }
-    .about-stats {
-      display: flex; gap: 3rem;
-      margin-top: 2.5rem;
-    }
-    .stat-item {}
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gray);
-      margin-top: 0.25rem;
-    }
-
+    .about-preview { background: var(--charcoal); padding: 96px 72px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .about-text p { color: var(--dim); line-height: 1.8; margin-bottom: 20px; font-size: 0.95rem; }
+    .about-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; filter: brightness(0.85); transition: filter 0.3s; }
+    .about-img:hover { filter: brightness(1); }
+    .stats-row { display: flex; gap: 48px; margin-top: 40px; }
+    .stat-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.4rem; font-weight: 300; color: var(--gold); }
+    .stat-label { font-size: 0.7rem; color: var(--dim); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+    .about-link { display: inline-block; margin-top: 32px; color: var(--gold); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; border-bottom: 1px solid var(--gold); padding-bottom: 2px; transition: opacity 0.2s; }
+    .about-link:hover { opacity: 0.7; }
     /* GALLERY PREVIEW */
-    .gallery-section { background: #050505; }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-      max-width: 1200px;
-      margin-left: auto; margin-right: auto;
-    }
-    .gallery-item {
-      position: relative;
-      aspect-ratio: 1;
-      overflow: hidden;
-      cursor: pointer;
-    }
-    .gallery-item img {
-      transition: transform 0.6s ease;
-    }
-    .gallery-item:hover img { transform: scale(1.06); }
-    .gallery-item::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: rgba(201,168,76,0);
-      transition: background 0.3s;
-    }
-    .gallery-item:hover::after { background: rgba(201,168,76,0.08); }
-    .gallery-cta { text-align: center; margin-top: 3rem; }
-
-    /* PODCAST */
-    .podcast-section {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .podcast-card {
-      border: 1px solid var(--border);
-      padding: 3.5rem;
-      position: relative;
-      margin-top: 2rem;
-    }
-    .podcast-card::before {
-      content: '';
-      position: absolute;
-      top: -1px; left: 50%; transform: translateX(-50%);
-      width: 80px; height: 1px;
-      background: var(--gold);
-    }
-    .podcast-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      display: block;
-    }
-    .podcast-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.875rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-    .podcast-sub {
-      color: var(--gray);
-      font-size: 1rem;
-      line-height: 1.7;
-      max-width: 480px;
-      margin: 0 auto 2rem;
-    }
-    .podcast-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-    /* BOOKING CTA */
-    .booking-cta-section {
-      text-align: center;
-      background: linear-gradient(to bottom, #050505, var(--bg));
-    }
-    .booking-cta-inner { max-width: 680px; margin: 0 auto; }
-    .booking-cta-inner .section-title { font-size: clamp(2rem, 4vw, 3.25rem); }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2.5rem 4rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .footer-copy {
-      font-size: 0.8125rem;
-      color: var(--gray);
-      letter-spacing: 0.05em;
-    }
-    .footer-credit {
-      font-size: 0.8125rem;
-      color: var(--gray);
-    }
-    .footer-credit a {
-      color: var(--gold);
-      transition: color 0.3s;
-    }
-    .footer-credit a:hover { color: var(--gold-light); }
-
-    /* LIGHTBOX */
-    .lightbox {
-      display: none;
-      position: fixed; inset: 0; z-index: 999;
-      background: rgba(0,0,0,0.95);
-      align-items: center; justify-content: center;
-    }
-    .lightbox.active { display: flex; }
-    .lightbox img {
-      max-width: 90vw; max-height: 90vh;
-      width: auto; height: auto;
-      object-fit: contain;
-    }
-    .lightbox-close {
-      position: absolute; top: 1.5rem; right: 2rem;
-      font-size: 2rem; color: var(--gray);
-      cursor: pointer; line-height: 1;
-      transition: color 0.3s;
-    }
-    .lightbox-close:hover { color: var(--gold); }
-
-    /* HAMBURGER (mobile) */
-    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .nav-toggle span { display: block; width: 24px; height: 1px; background: var(--gold); transition: all 0.3s; }
-
+    .gallery-section { padding: 96px 72px; background: var(--black); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; max-width: 1200px; margin: 0 auto 48px; }
+    .gallery-item { aspect-ratio: 1; overflow: hidden; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85); transition: filter 0.4s, transform 0.4s; display: block; }
+    .gallery-item:hover img { filter: brightness(1); transform: scale(1.04); }
+    .gallery-cta-wrap { text-align: center; }
+    /* BOOKING PREVIEW */
+    .booking-preview { background: var(--charcoal); padding: 96px 72px; text-align: center; }
+    .booking-preview h2 { max-width: 560px; margin: 0 auto 20px; }
+    .booking-preview p { color: var(--dim); max-width: 480px; margin: 0 auto 36px; font-size: 0.95rem; }
+    /* TESTIMONIALS PREVIEW */
+    .testimonials-preview { padding: 96px 72px; background: var(--black); }
+    .testimonials-preview .inner { max-width: 700px; margin: 0 auto; }
+    .testimonial-placeholder { border: 1px solid var(--border); padding: 48px; text-align: center; }
+    .testimonial-placeholder p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--dim); margin-bottom: 8px; }
+    .testimonial-placeholder small { color: var(--dim); font-size: 0.75rem; letter-spacing: 0.06em; }
+    /* MOBILE */
     @media (max-width: 900px) {
-      nav { padding: 1.25rem 2rem; }
-      .nav-toggle { display: flex; }
-      .nav-links {
-        display: none; flex-direction: column; gap: 0;
-        position: absolute; top: 100%; left: 0; right: 0;
-        background: rgba(8,8,8,0.98);
-        border-bottom: 1px solid var(--border);
-        padding: 1rem 0;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links li a { display: block; padding: 0.75rem 2rem; }
-      section { padding: 5rem 2rem; }
-      .about-preview { grid-template-columns: 1fr; gap: 3rem; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-      footer { padding: 2rem; flex-direction: column; text-align: center; }
+      .hero { padding: 0 24px 60px; }
+      .about-preview, .gallery-section, .booking-preview, .testimonials-preview { padding: 72px 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-row { gap: 28px; }
+      h1 { font-size: clamp(3rem, 10vw, 6rem); }
     }
-    @media (max-width: 540px) {
+    @media (max-width: 480px) {
       .gallery-grid { grid-template-columns: 1fr; }
-      .about-stats { gap: 1.5rem; }
     }
   </style>
 </head>
 <body>
-
-  <nav id="nav">
-    <a href="index.html" class="nav-logo">Eric Hare</a>
-    <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
-      <span></span><span></span><span></span>
-    </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="tattoos.html">Tattoos</a></li>
-      <li><a href="booking.html">Booking</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
+  
+  <nav>
+    <a href="./index.html" class="nav-logo">Eric Hare</a>
+    <ul class="nav-links">
+      <li><a href="./index.html" class="active"
+        data-en="Inicio" data-es="Inicio">Inicio</a></li>
+      <li><a href="./about.html" 
+        data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</a></li>
+      <li><a href="./tattoos.html" 
+        data-en="Tattoos" data-es="Tatuajes">Tatuajes</a></li>
+      <li><a href="./booking.html" 
+        data-en="Booking" data-es="Reservaciones">Reservaciones</a></li>
+      <li><a href="./testimonials.html" 
+        data-en="Reviews" data-es="Testimonios">Testimonios</a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()">EN</button></li>
     </ul>
+    <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+  <div class="mobile-menu">
+    <a href="./index.html" data-en="Home" data-es="Inicio">Inicio</a>
+    <a href="./about.html" data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</a>
+    <a href="./tattoos.html" data-en="Tattoos" data-es="Tatuajes">Tatuajes</a>
+    <a href="./booking.html" data-en="Booking" data-es="Reservaciones">Reservaciones</a>
+    <a href="./testimonials.html" data-en="Reviews" data-es="Testimonios">Testimonios</a>
+  </div>
+  <a href="./booking.html" class="book-float">Reserva</a>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
-    <div class="hero-geo"></div>
+    <div class="hero-gradient"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">San Diego, CA &nbsp;·&nbsp; Sacred Geometry &nbsp;·&nbsp; Dotwork</p>
-      <h1>Where Geometry<br /><span>Meets Skin</span></h1>
-      <p class="hero-sub">Custom geometric tattoos rooted in sacred geometry, mandalas, and precision — crafted with 12+ years of experience.</p>
-      <div class="hero-btns">
-        <a href="booking.html" class="btn btn-gold">Book a Session</a>
-        <a href="tattoos.html" class="btn btn-outline">View Work</a>
+      <p class="hero-eyebrow fade-up" data-en="Geometr&#xed;a Sagrada" data-es="Geometr&#xed;a Sagrada">Geometr&#xed;a Sagrada &#xb7; San Diego, California, US</p>
+      <h1 class="fade-up" data-en="Eric Hare" data-es="Eric Hare">Eric Hare</h1>
+      <p class="hero-sub fade-up" data-en="Tatuajes que cuentan tu historia. Basado en San Diego, California." data-es="Tatuajes que cuentan tu historia. Basado en San Diego, California.">Tatuajes que cuentan tu historia. Basado en San Diego, California.</p>
+      <a href="./booking.html" class="hero-cta fade-up" data-en="Reservar Sesi&#xf3;n" data-es="Reservar Sesi&#xf3;n">Reservar Sesi&#xf3;n</a>
+      <div class="social-row fade-up">
+        <a href="https://www.instagram.com/ericharetattoo" target="_blank" rel="noopener">@ericharetattoo</a>
+        <span style="color:var(--border)">&#xb7;</span>
+        <a href="mailto:ericharetattoo@gmail.com">Cont&#xe1;ctame</a>
       </div>
     </div>
   </section>
 
   <!-- ABOUT PREVIEW -->
-  <section style="padding: 7rem 4rem;">
-    <div class="about-preview">
-      <div class="about-img-wrap">
-        <img src="./img/photo_01.jpg" alt="Eric Hare geometric tattoo work" />
-      </div>
+  <section class="about-preview">
+    <div class="about-grid">
       <div>
-        <p class="section-label">The Artist</p>
-        <h2 class="section-title">Eric Hare</h2>
-        <div class="divider"></div>
-        <p class="section-sub">Geometric tattoo artist based in San Diego, CA — specializing in sacred geometry, mandalas, dotwork, and precision line work. Every piece lives on the boundary between mathematics and art.</p>
-        <div class="about-stats">
+        <p class="section-label fade-up" data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</p>
+        <h2 class="fade-up">El Arte Detr&#xe1;s del Artista</h2>
+        <div class="about-text">
+          <p class="fade-up">Soy Eric Hare, artista de tatuaje en San Diego, California.</p>
+          <p class="fade-up">Mi trabajo refleja una pasi&#xf3;n profunda por el arte y la piel como lienzo.</p>
+        </div>
+        <div class="stats-row fade-up">
           <div class="stat-item">
-            <div class="stat-num">16K+</div>
-            <div class="stat-label">Followers</div>
+            
           </div>
           <div class="stat-item">
-            <div class="stat-num">12+</div>
-            <div class="stat-label">Years Experience</div>
+            <div class="stat-num">16.8K</div>
+            <div class="stat-label" data-en="Followers" data-es="Seguidores">Seguidores</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">Geometr&#xed;a</div>
+            <div class="stat-label" data-en="Style" data-es="Estilo">Estilo</div>
           </div>
         </div>
-        <br />
-        <a href="about.html" class="btn btn-outline" style="margin-top:1rem;">Read My Story</a>
+        <a href="./about.html" class="about-link fade-up" data-en="Read More &#x2192;" data-es="Leer M&#xe1;s &#x2192;">Leer M&#xe1;s &#x2192;</a>
+      </div>
+      <div>
+        <img src="img/2.jpg" alt="Eric Hare" class="about-img fade-up">
       </div>
     </div>
   </section>
 
   <!-- GALLERY PREVIEW -->
-  <section class="gallery-section" style="padding: 7rem 4rem;">
-    <div style="max-width:1200px; margin:0 auto;">
-      <p class="section-label">Gallery</p>
-      <h2 class="section-title">Selected Work</h2>
-      <div class="divider"></div>
+  <section class="gallery-section">
+    <div style="max-width:1200px;margin:0 auto 32px;">
+      <p class="section-label fade-up" data-en="Gallery" data-es="Galer&#xed;a">Galer&#xed;a</p>
+      <h2 class="fade-up">Trabajo Reciente</h2>
     </div>
-    <div class="gallery-grid" style="margin-top:2.5rem;">
-      <div class="gallery-item" onclick="openLightbox('./img/photo_01.jpg')"><img src="./img/photo_01.jpg" alt="Geometric tattoo" loading="lazy" /></div>
-      <div class="gallery-item" onclick="openLightbox('./img/photo_02.jpg')"><img src="./img/photo_02.jpg" alt="Sacred geometry tattoo" loading="lazy" /></div>
-      <div class="gallery-item" onclick="openLightbox('./img/photo_03.jpg')"><img src="./img/photo_03.jpg" alt="Mandala tattoo" loading="lazy" /></div>
-      <div class="gallery-item" onclick="openLightbox('./img/photo_04.jpg')"><img src="./img/photo_04.jpg" alt="Dotwork tattoo" loading="lazy" /></div>
-      <div class="gallery-item" onclick="openLightbox('./img/photo_05.jpg')"><img src="./img/photo_05.jpg" alt="Geometric sleeve" loading="lazy" /></div>
-      <div class="gallery-item" onclick="openLightbox('./img/photo_06.jpg')"><img src="./img/photo_06.jpg" alt="Precision line work" loading="lazy" /></div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="img/1.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/2.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/3.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/4.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/5.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/6.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
     </div>
-    <div class="gallery-cta">
-      <a href="tattoos.html" class="btn btn-outline">View Full Gallery</a>
-    </div>
-  </section>
-
-  <!-- PODCAST -->
-  <section style="padding: 7rem 4rem; background: var(--bg);">
-    <div class="podcast-section">
-      <p class="section-label">Listen</p>
-      <div class="podcast-card">
-        <span class="podcast-icon">◈</span>
-        <h2 class="podcast-title">Sacred G Podcast</h2>
-        <p class="podcast-sub">Conversations about geometry, mindfulness, and the art of tattooing</p>
-        <div class="podcast-btns">
-          <a href="https://www.youtube.com/@ericharetattoo" target="_blank" rel="noopener" class="btn btn-outline">▶ YouTube</a>
-          <a href="https://open.spotify.com/search/Sacred%20G%20Podcast" target="_blank" rel="noopener" class="btn btn-outline">♫ Spotify</a>
-        </div>
-      </div>
+    <div class="gallery-cta-wrap fade-up">
+      <a href="./tattoos.html" class="btn-outline" data-en="View Full Gallery &#x2192;" data-es="Ver Galer&#xed;a Completa &#x2192;">Ver Galer&#xed;a Completa &#x2192;</a>
     </div>
   </section>
 
   <!-- BOOKING CTA -->
-  <section class="booking-cta-section" style="padding: 7rem 4rem;">
-    <div class="booking-cta-inner">
-      <p class="section-label">Ready?</p>
-      <h2 class="section-title">Start Your Custom Piece</h2>
-      <div class="divider" style="margin: 1.5rem auto;"></div>
-      <p class="section-sub" style="margin: 0 auto 2.5rem;">Every design is a collaboration — rooted in your vision, refined through geometry.</p>
-      <a href="booking.html" class="btn btn-gold">Book Your Session</a>
+  <section class="booking-preview">
+    <p class="section-label fade-up" data-en="Book a Session" data-es="Reserva tu Sesi&#xf3;n">Reserva tu Sesi&#xf3;n</p>
+    <h2 class="fade-up">&#xbf;Listo para tu pr&#xf3;ximo tatuaje?</h2>
+    <p class="fade-up" data-en="Let's create something meaningful together." data-es="Creemos algo significativo juntos.">Creemos algo significativo juntos.</p>
+    <a href="./booking.html" class="btn-gold fade-up" data-en="Reservar Sesi&#xf3;n" data-es="Reservar Sesi&#xf3;n">Reservar Sesi&#xf3;n</a>
+  </section>
+
+  <!-- TESTIMONIALS PREVIEW -->
+  <section class="testimonials-preview">
+    <div class="inner">
+      <p class="section-label fade-up" data-en="Reviews" data-es="Testimonios">Testimonios</p>
+      <h2 class="fade-up">Lo Que Dicen</h2>
+      <div class="testimonial-placeholder fade-up">
+        <p data-en="Be the first to share your experience." data-es="S&#xe9; el primero en compartir tu experiencia.">S&#xe9; el primero en compartir tu experiencia.</p>
+        <small><a href="./testimonials.html" style="color:var(--gold);text-decoration:none;" data-en="Share your story &#x2192;" data-es="Comparte tu historia &#x2192;">Comparte tu historia &#x2192;</a></small>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  
   <footer>
-    <span class="footer-copy">© 2025 Eric Hare</span>
-    <span class="footer-credit">Site by <a href="https://eternowebstudio.com" target="_blank" rel="noopener">Eterno Web Studio</a></span>
+    <div class="footer-logo">Eric Hare</div>
+    <div class="footer-links">
+      <a href="./index.html">Inicio</a>
+      <a href="./about.html">Sobre M&#xed;</a>
+      <a href="./tattoos.html">Tatuajes</a>
+      <a href="./booking.html">Reservaciones</a>
+      <a href="https://www.instagram.com/ericharetattoo" target="_blank" rel="noopener">Instagram</a>
+      
+    </div>
+    <div class="footer-copy">&#xa9; 2026 Eric Hare</div>
   </footer>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close" onclick="closeLightbox()">×</span>
-    <img id="lightboxImg" src="" alt="Tattoo" />
-  </div>
-
+  
   <script>
-    function toggleNav() {
-      document.getElementById('navLinks').classList.toggle('open');
+    const LANG = { default: 'es', current: 'es' };
+    function toggleLang() {
+      LANG.current = LANG.current === 'es' ? 'en' : 'es';
+      document.querySelectorAll('[data-es][data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + LANG.current) || el.textContent;
+      });
+      document.querySelectorAll('[data-es-href][data-en-href]').forEach(el => {
+        el.setAttribute('href', el.getAttribute('data-' + LANG.current + '-href') || el.getAttribute('href'));
+      });
     }
-    function openLightbox(src) {
-      document.getElementById('lightboxImg').src = src;
-      document.getElementById('lightbox').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeLightbox();
-    });
-    // Scroll nav
-    window.addEventListener('scroll', function() {
-      document.getElementById('nav').style.padding = window.scrollY > 40 ? '0.875rem 4rem' : '1.25rem 4rem';
-    });
+    // Fade-up on scroll
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
   </script>
 </body>
 </html>
