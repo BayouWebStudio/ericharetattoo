@@ -1,270 +1,311 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre M&#xed; &#x2014; Eric Hare | Tattoo Artist Guru Tattoo Little Italy</title>
-  <meta name="description" content="Soy Eric Hare, artista de tatuaje en Guru Tattoo Little Italy.">
-  <link rel="canonical" href="https://bayouwebstudio.github.io/ericharetattoo/about.html">
-  <meta property="og:title" content="Sobre M&#xed; &#x2014; Eric Hare">
-  <meta property="og:description" content="Soy Eric Hare, artista de tatuaje en Guru Tattoo Little Italy.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/BayouWebStudio/ericharetattoo/main/img/2.jpg">
-  <meta property="og:url" content="https://bayouwebstudio.github.io/ericharetattoo/about.html">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Eric Hare | Geometric Tattoo Artist San Diego</title>
+  <meta name="description" content="Learn about Eric Hare, a geometric tattoo artist in San Diego, CA with 12+ years of experience in sacred geometry, mandalas, and dotwork." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-    
-    :root {
-      --black: #0a0a0a;
-      --charcoal: #141414;
-      --gold: #C9A84C;
-      --white: #f5f5f0;
-      --dim: #888;
-      --border: rgba(255,255,255,0.07);
-    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080808;
+      --gold: #c9a84c;
+      --gold-light: #dbbf6e;
+      --white: #ffffff;
+      --gray: #aaaaaa;
+      --border: rgba(201,168,76,0.25);
+    }
     html { scroll-behavior: smooth; }
     body {
-      background: var(--black);
+      background: var(--bg);
       color: var(--white);
       font-family: 'Inter', sans-serif;
       font-weight: 300;
-      line-height: 1.6;
-      overflow-x: hidden;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
-    /* NAV */
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 20px 48px;
-      background: rgba(10,5,5,0.92);
+      padding: 1.25rem 4rem;
+      background: rgba(8,8,8,0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
     .nav-logo {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      color: var(--white);
-      text-decoration: none;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 600;
+      letter-spacing: 0.05em; color: var(--gold);
     }
-    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
-      color: var(--dim);
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      transition: color 0.2s;
+      font-size: 0.8125rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gray); transition: color 0.3s;
     }
-    .nav-links a:hover, .nav-links a.active { color: var(--white); }
-    .lang-toggle {
-      background: none;
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .nav-toggle span { display: block; width: 24px; height: 1px; background: var(--gold); }
+
+    /* PAGE HERO */
+    .page-hero {
+      padding: 12rem 4rem 6rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.07) 0%, transparent 65%);
+    }
+    .page-eyebrow {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700; line-height: 1.1;
+      position: relative;
+    }
+
+    /* CONTENT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 6rem;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 7rem 4rem;
+    }
+    .about-photo-col {}
+    .photo-frame {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+    .photo-frame::before {
+      content: ''; position: absolute; inset: -1px;
+      border: 1px solid var(--border); z-index: 1;
+    }
+    .photo-frame::after {
+      content: ''; position: absolute;
+      bottom: -12px; right: -12px;
+      width: 100%; height: 100%;
+      border: 1px solid var(--border); z-index: 0;
+    }
+    .stats-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; margin-top: 2.5rem;
+    }
+    .stat-box {
       border: 1px solid var(--border);
-      color: var(--dim);
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 6px 12px;
-      cursor: pointer;
-      transition: all 0.2s;
+      padding: 1.5rem;
+      text-align: center;
     }
-    .lang-toggle:hover { border-color: var(--gold); color: var(--gold); }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 1px; background: var(--white); margin: 5px 0; transition: all 0.3s; }
-    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
-    .mobile-menu {
-      display: none; position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
-      background: var(--charcoal); padding: 24px 48px; border-bottom: 1px solid var(--border);
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.25rem; font-weight: 700;
+      color: var(--gold); line-height: 1;
     }
-    .mobile-menu.open { display: block; }
-    .mobile-menu a { display: block; color: var(--white); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 0; border-bottom: 1px solid var(--border); }
-    /* FLOATING BOOK */
-    .book-float {
-      position: fixed; bottom: 32px; right: 32px; z-index: 200;
-      background: var(--gold); color: #000;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
-      text-decoration: none; padding: 14px 22px; border-radius: 2px;
-      box-shadow: 0 4px 24px rgba(201,168,76,0.35);
-      transition: transform 0.2s, box-shadow 0.2s;
+    .stat-label {
+      font-size: 0.7rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--gray);
+      margin-top: 0.35rem;
     }
-    .book-float:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
-    /* FADE-UP ANIMATIONS */
-    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-    /* FOOTER */
-    footer {
-      background: var(--charcoal); padding: 48px 72px;
+
+    .about-text-col {}
+    .section-label {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 600; line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .divider { width: 48px; height: 1px; background: var(--gold); margin: 1.25rem 0; }
+    .bio-text {
+      font-size: 1.0625rem; color: #cccccc;
+      line-height: 1.9; margin-bottom: 1.5rem;
+    }
+
+    .specialties {
+      margin-top: 2.5rem;
       border-top: 1px solid var(--border);
-      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 2.5rem;
     }
-    .footer-logo { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--dim); }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { color: var(--dim); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--white); }
-    .footer-copy { color: var(--dim); font-size: 0.72rem; }
-    /* SHARED */
-    .section-label { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-    h2 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 400; line-height: 1.1; margin-bottom: 24px;
+    .specialties h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 600;
+      margin-bottom: 1.25rem;
     }
-    .btn-gold {
-      display: inline-block; background: var(--gold); color: #000;
-      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
-      text-transform: uppercase; padding: 16px 40px;
-      transition: opacity 0.2s;
+    .tag-list { display: flex; flex-wrap: wrap; gap: 0.625rem; }
+    .tag {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      font-size: 0.75rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
     }
-    .btn-gold:hover { opacity: 0.88; }
-    .btn-outline {
-      display: inline-block; border: 1px solid var(--border); color: var(--white);
-      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
-      text-transform: uppercase; padding: 14px 36px;
-      transition: border-color 0.2s, color 0.2s;
+
+    .locations {
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2.5rem;
     }
-    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
-    /* MOBILE */
+    .locations h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .location-item {
+      font-size: 0.9375rem; color: var(--gray);
+      margin-bottom: 0.375rem;
+    }
+    .location-item strong { color: var(--white); }
+
+    .social-row { margin-top: 2.5rem; border-top: 1px solid var(--border); padding-top: 2.5rem; }
+    .social-row h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.875rem 2.25rem;
+      font-size: 0.8125rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      transition: all 0.3s; cursor: pointer;
+    }
+    .btn-gold { background: var(--gold); color: #080808; border: 1px solid var(--gold); }
+    .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
+    .btn-outline { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+    .btn-outline:hover { background: rgba(201,168,76,0.1); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-copy { font-size: 0.8125rem; color: var(--gray); letter-spacing: 0.05em; }
+    .footer-credit { font-size: 0.8125rem; color: var(--gray); }
+    .footer-credit a { color: var(--gold); transition: color 0.3s; }
+    .footer-credit a:hover { color: var(--gold-light); }
+
     @media (max-width: 900px) {
-      nav { padding: 18px 24px; } .nav-links { display: none; } .hamburger { display: block; }
-      footer { flex-direction: column; gap: 24px; padding: 40px 24px; text-align: center; }
-    }
-    @media (max-width: 600px) {
-      footer { padding: 32px 20px; }
-    }
-  
-    .page-hero { padding: 160px 72px 80px; background: var(--charcoal); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
-    .page-hero-bg { position: absolute; inset: 0; background-image: url('img/2.jpg'); background-size: cover; background-position: center; filter: brightness(0.25); }
-    .page-hero-content { position: relative; z-index: 2; }
-    .page-eyebrow { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(3rem, 6vw, 5rem); font-weight: 300; line-height: 1; }
-    .about-body { padding: 96px 72px; max-width: 1200px; margin: 0 auto; }
-    .about-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; align-items: start; }
-    .bio-section p { color: var(--dim); line-height: 1.9; margin-bottom: 28px; font-size: 1rem; }
-    .stats-section { position: sticky; top: 100px; }
-    .stat-card { border: 1px solid var(--border); padding: 32px; margin-bottom: 16px; text-align: center; }
-    .stat-big { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 3rem; font-weight: 300; color: var(--gold); }
-    .stat-small { font-size: 0.72rem; color: var(--dim); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 8px; }
-    .specialty-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
-    .tag { border: 1px solid var(--border); color: var(--dim); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 16px; }
-    @media (max-width: 900px) {
-      .page-hero { padding: 120px 24px 60px; }
-      .about-body { padding: 60px 24px; }
-      .about-layout { grid-template-columns: 1fr; gap: 48px; }
-      .stats-section { position: static; }
+      nav { padding: 1.25rem 2rem; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none; flex-direction: column; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(8,8,8,0.98); border-bottom: 1px solid var(--border);
+        padding: 1rem 0;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li a { display: block; padding: 0.75rem 2rem; }
+      .page-hero { padding: 9rem 2rem 4rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 2rem; }
+      footer { padding: 2rem; flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body>
-  
-  <nav>
-    <a href="./index.html" class="nav-logo">Eric Hare</a>
-    <ul class="nav-links">
-      <li><a href="./index.html" 
-        data-en="Inicio" data-es="Inicio">Inicio</a></li>
-      <li><a href="./about.html" class="active"
-        data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</a></li>
-      <li><a href="./tattoos.html" 
-        data-en="Tattoos" data-es="Tatuajes">Tatuajes</a></li>
-      <li><a href="./booking.html" 
-        data-en="Booking" data-es="Reservaciones">Reservaciones</a></li>
-      <li><a href="./testimonials.html" 
-        data-en="Reviews" data-es="Testimonios">Testimonios</a></li>
-      <li><button class="lang-toggle" onclick="toggleLang()">EN</button></li>
-    </ul>
-    <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open')">
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Eric Hare</a>
+    <div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
       <span></span><span></span><span></span>
-    </button>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="tattoos.html">Tattoos</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+    </ul>
   </nav>
-  <div class="mobile-menu">
-    <a href="./index.html" data-en="Home" data-es="Inicio">Inicio</a>
-    <a href="./about.html" data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</a>
-    <a href="./tattoos.html" data-en="Tattoos" data-es="Tatuajes">Tatuajes</a>
-    <a href="./booking.html" data-en="Booking" data-es="Reservaciones">Reservaciones</a>
-    <a href="./testimonials.html" data-en="Reviews" data-es="Testimonios">Testimonios</a>
+
+  <div class="page-hero">
+    <p class="page-eyebrow">The Artist</p>
+    <h1 class="page-title">About Eric Hare</h1>
   </div>
-  <a href="./booking.html" class="book-float">Reserva</a>
 
-  <section class="page-hero">
-    <div class="page-hero-bg"></div>
-    <div class="page-hero-content">
-      <p class="page-eyebrow fade-up" data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</p>
-      <h1 class="fade-up">Eric Hare</h1>
-    </div>
-  </section>
-
-  <div class="about-body">
-    <div class="about-layout">
-      <div class="bio-section">
-        <p class="fade-up">Soy Eric Hare, artista de tatuaje en Guru Tattoo Little Italy.</p>
-        <p class="fade-up">Mi trabajo refleja una pasi&#xf3;n profunda por el arte y la piel como lienzo.</p>
-        <p class="fade-up">Cada pieza es &#xfa;nica, creada con intenci&#xf3;n y cuidado.</p>
-        <p class="fade-up">Cont&#xe1;ctame para comenzar tu proyecto.</p>
-        <div class="specialty-tags fade-up">
-          <span class="tag">Geometr&#xed;a Sagrada</span>
-          <span class="tag">Guru Tattoo Little Italy</span>
-          <span class="tag" data-en="Tattoo Artist" data-es="Artista de Tatuaje">Artista de Tatuaje</span>
-          <span class="tag" data-en="Custom Work" data-es="Trabajo Personalizado">Trabajo Personalizado</span>
-        </div>
-        <a href="./booking.html" class="btn-gold" style="margin-top:48px;" data-en="Reservar Sesi&#xf3;n" data-es="Reservar Sesi&#xf3;n">Reservar Sesi&#xf3;n</a>
+  <div class="about-grid">
+    <!-- Photo Column -->
+    <div class="about-photo-col">
+      <div class="photo-frame">
+        <img src="./img/photo_01.jpg" alt="Eric Hare — Geometric Tattoo Artist" />
       </div>
-      <div class="stats-section">
-        <div class="stat-card fade-up">
-          <div class="stat-big">1+</div>
-          <div class="stat-small" data-en="Years of Experience" data-es="A&#xf1;os de Experiencia">A&#xf1;os de Experiencia</div>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-num">16K+</div>
+          <div class="stat-label">Followers</div>
         </div>
-        <div class="stat-card fade-up">
-          <div class="stat-big">16.8K</div>
-          <div class="stat-small" data-en="Instagram Followers" data-es="Seguidores en Instagram">Seguidores en Instagram</div>
-        </div>
-        <div class="stat-card fade-up">
-          <div class="stat-big">Geometr&#xed;a</div>
-          <div class="stat-small" data-en="Primary Style" data-es="Estilo Principal">Estilo Principal</div>
-        </div>
-        <div class="stat-card fade-up">
-          <div class="stat-big">Guru Tattoo Little Italy</div>
-          <div class="stat-small" data-en="Base City" data-es="Ciudad Base">Ciudad Base</div>
+        <div class="stat-box">
+          <div class="stat-num">12+</div>
+          <div class="stat-label">Years Experience</div>
         </div>
       </div>
     </div>
+
+    <!-- Text Column -->
+    <div class="about-text-col">
+      <p class="section-label">Biography</p>
+      <h2 class="section-title">Geometry as a Spiritual Practice</h2>
+      <div class="divider"></div>
+
+      <p class="bio-text">Eric Hare is a geometric tattoo artist based in San Diego, CA, specializing in sacred geometry, mandalas, dotwork, and precision line work. His journey into tattooing was shaped by a deep study of Buddhism and mindfulness — a transformative path that infused his work with spiritual intention and geometric precision.</p>
+
+      <p class="bio-text">Every piece Eric creates lives on the boundary between mathematics and art. His work spans full sleeves to intricate chest pieces — each design a custom exploration of symmetry, dotwork, and organic pattern. Whether you're drawn to strict geometric structures or flowing mandalas, Eric collaborates closely to bring your vision to life.</p>
+
+      <div class="specialties">
+        <h3>Specialties</h3>
+        <div class="tag-list">
+          <span class="tag">Sacred Geometry</span>
+          <span class="tag">Mandalas</span>
+          <span class="tag">Dotwork</span>
+          <span class="tag">Precision Line Work</span>
+          <span class="tag">Geometric Sleeves</span>
+          <span class="tag">Chest Pieces</span>
+          <span class="tag">Black &amp; Grey</span>
+          <span class="tag">Custom Design</span>
+        </div>
+      </div>
+
+      <div class="locations">
+        <h3>Where to Find Me</h3>
+        <p class="location-item"><strong>Guru Tattoo Little Italy</strong> — San Diego, CA</p>
+        <p class="location-item"><strong>The Tattoo Temple</strong> — San Diego, CA</p>
+      </div>
+
+      <div class="social-row">
+        <h3>Follow &amp; Connect</h3>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="https://www.instagram.com/ericharetattoo" target="_blank" rel="noopener" class="btn btn-outline">Instagram</a>
+          <a href="booking.html" class="btn btn-gold">Book a Session</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  
   <footer>
-    <div class="footer-logo">Eric Hare</div>
-    <div class="footer-links">
-      <a href="./index.html">Inicio</a>
-      <a href="./about.html">Sobre M&#xed;</a>
-      <a href="./tattoos.html">Tatuajes</a>
-      <a href="./booking.html">Reservaciones</a>
-      <a href="https://www.instagram.com/ericharetattoo" target="_blank" rel="noopener">Instagram</a>
-      
-    </div>
-    <div class="footer-copy">&#xa9; 2026 Eric Hare</div>
+    <span class="footer-copy">© 2025 Eric Hare</span>
+    <span class="footer-credit">Site by <a href="https://eternowebstudio.com" target="_blank" rel="noopener">Eterno Web Studio</a></span>
   </footer>
-  
+
   <script>
-    const LANG = { default: 'es', current: 'es' };
-    function toggleLang() {
-      LANG.current = LANG.current === 'es' ? 'en' : 'es';
-      document.querySelectorAll('[data-es][data-en]').forEach(el => {
-        el.textContent = el.getAttribute('data-' + LANG.current) || el.textContent;
-      });
-      document.querySelectorAll('[data-es-href][data-en-href]').forEach(el => {
-        el.setAttribute('href', el.getAttribute('data-' + LANG.current + '-href') || el.getAttribute('href'));
-      });
-    }
-    // Fade-up on scroll
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+    window.addEventListener('scroll', function() {
+      document.getElementById('nav').style.padding = window.scrollY > 40 ? '0.875rem 4rem' : '1.25rem 4rem';
+    });
   </script>
 </body>
 </html>
