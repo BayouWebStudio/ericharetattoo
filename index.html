@@ -295,7 +295,7 @@
             <div class="stat-label" data-en="Style" data-es="Estilo">Estilo</div>
           </div>
         </div>
-        <a href="./about.html" class="about-link fade-up" data-en="Read More &#x2192;" data-es="Leer M&#xe1;s &#x2192;">Leer M&#xe1;s &#x2192;</a>
+        <a href="./about.html" class="about-link fade-up" data-en="Read More &#x2192;" data-es="Read More &#x2192;">Read More &#x2192;</a>
       </div>
       <div>
         <img src="img/2.jpg" alt="Eric Hare" class="about-img fade-up">
@@ -325,7 +325,7 @@
   <!-- BOOKING CTA -->
   <section class="booking-preview">
     <p class="section-label fade-up" data-en="Book a Session" data-es="Book tu Sesi&#xf3;n">Book tu Sesi&#xf3;n</p>
-    <h2 class="fade-up">&#xbf;Listo para tu pr&#xf3;ximo tatuaje?</h2>
+    <h2 class="fade-up">Ready for your next tattoo?</h2>
     <p class="fade-up" data-en="Let's create something meaningful together." data-es="Creemos algo significativo juntos.">Creemos algo significativo juntos.</p>
     <a href="./booking.html" class="btn-gold fade-up" data-en="Book a Session" data-es="Book a Session">Book a Session</a>
   </section>
@@ -334,7 +334,7 @@
   <section class="testimonials-preview">
     <div class="inner">
       <p class="section-label fade-up" data-en="Reviews" data-es="Testimonios">Testimonials</p>
-      <h2 class="fade-up">Lo Que Dicen</h2>
+      <h2 class="fade-up">What They Say</h2>
       <div class="testimonial-placeholder fade-up">
         <p data-en="Be the first to share your experience." data-es="S&#xe9; el primero en compartir tu experiencia.">S&#xe9; el primero en compartir tu experiencia.</p>
         <small><a href="./testimonials.html" style="color:var(--gold);text-decoration:none;" data-en="Share your story &#x2192;" data-es="Comparte tu historia &#x2192;">Comparte tu historia &#x2192;</a></small>
@@ -382,6 +382,12 @@
         el.setAttribute('href', el.getAttribute('data-' + LANG.current + '-href') || el.getAttribute('href'));
       });
     }
+    // Apply default language on load
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('[data-es][data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + LANG.current) || el.textContent;
+      });
+    });
     // Fade-up on scroll
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
