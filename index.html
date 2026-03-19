@@ -1,904 +1,377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eric Hare | Geometric Tattoo Artist — San Diego, CA</title>
-  <meta name="description" content="Eric Hare is a geometric tattoo artist based in San Diego, CA specializing in mandalas, dotwork, sacred geometry, and black geometric sleeves. Book at The Tattoo Temple." />
-  <meta name="keywords" content="Eric Hare, geometric tattoo, San Diego tattoo artist, mandala tattoo, dotwork, sacred geometry, ericharetattoo" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Eric Hare | Geometric Tattoo Artist — San Diego, CA" />
-  <meta property="og:description" content="Black geometric, mandalas, dotwork & sacred geometry. Based in San Diego at The Tattoo Temple." />
-  <meta property="og:image" content="https://iili.io/qqK1v2a.jpg" />
-  <meta property="og:url" content="https://bayouwebstudio.com/ericharetattoo/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Eric Hare | Geometric Tattoo Artist — San Diego, CA" />
-  <meta name="twitter:description" content="Black geometric, mandalas, dotwork & sacred geometry. Based in San Diego at The Tattoo Temple." />
-  <meta name="twitter:image" content="https://iili.io/qqK1v2a.jpg" />
-
-  <!-- JSON-LD LocalBusiness Schema -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric Hare &#x2014; Tattoo Artist | Guru Tattoo Little Italy</title>
+  <meta name="description" content="Eric Hare is a tattoo artist based in Guru Tattoo Little Italy specializing in Geometr&#xed;a Sagrada. Tatuajes que cuentan tu historia. Basado en Guru Tattoo Little Italy.">
+  <link rel="canonical" href="https://bayouwebstudio.github.io/ericharetattoo/">
+  <meta property="og:title" content="Eric Hare &#x2014; Tattoo Artist">
+  <meta property="og:description" content="Tatuajes que cuentan tu historia. Basado en Guru Tattoo Little Italy.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/BayouWebStudio/ericharetattoo/main/img/1.jpg">
+  <meta property="og:url" content="https://bayouwebstudio.github.io/ericharetattoo/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Eric Hare — Geometric Tattoo Artist",
-    "description": "Black geometric, mandalas, dotwork, sleeves, and sacred geometry tattoos.",
-    "url": "https://bayouwebstudio.com/ericharetattoo/",
-    "image": "https://iili.io/qqK1NB1.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "San Diego",
-      "addressRegion": "CA",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://www.instagram.com/ericharetattoo/",
-      "https://www.cocreate.ink/artists/ericharetattoo"
-    ]
+    "@type": "Person",
+    "name": "Eric Hare",
+    "jobTitle": "Tattoo Artist",
+    "url": "https://bayouwebstudio.github.io/ericharetattoo/",
+    "sameAs": ["https://www.instagram.com/ericharetattoo"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Guru Tattoo Little Italy", "addressCountry": "US" }
   }
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+    
     :root {
-      --gold: #C9A07A;
-      --gold-light: #e0bc97;
       --black: #0a0a0a;
-      --dark: #111111;
-      --darker: #0d0d0d;
-      --text: #e8e8e8;
-      --muted: #888;
+      --charcoal: #141414;
+      --gold: #C9A84C;
+      --white: #f5f5f0;
+      --dim: #888;
+      --border: rgba(255,255,255,0.07);
     }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--black);
-      color: var(--text);
+      color: var(--white);
       font-family: 'Inter', sans-serif;
       font-weight: 300;
       line-height: 1.6;
       overflow-x: hidden;
     }
-
-    /* ── NAV ── */
+    /* NAV */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 2.5rem;
-      background: rgba(10,10,10,0.85);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(10,5,5,0.92);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(201,160,122,0.12);
+      border-bottom: 1px solid var(--border);
     }
-
     .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: 0.05em;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--white);
       text-decoration: none;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
     .nav-links a {
-      color: var(--muted);
+      color: var(--dim);
       text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 500;
+      font-size: 0.75rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      transition: color 0.3s;
+      transition: color 0.2s;
     }
-
-    .nav-links a:hover { color: var(--gold); }
-
-    /* ── HERO ── */
-    #hero {
-      position: relative;
-      height: 100vh;
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('https://iili.io/qqK1v2a.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: brightness(0.35);
-      transform: scale(1.05);
-      transition: transform 8s ease;
-    }
-
-    #hero:hover .hero-bg { transform: scale(1.0); }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.7) 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 800px;
-      padding: 0 1.5rem;
-    }
-
-    .hero-eyebrow {
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .lang-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--dim);
       font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 8vw, 6.5rem);
-      font-weight: 900;
-      line-height: 1.0;
-      color: #fff;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-subtitle {
-      font-size: clamp(0.9rem, 2vw, 1.1rem);
-      color: rgba(255,255,255,0.65);
-      font-weight: 300;
-      letter-spacing: 0.05em;
-      margin-bottom: 2.5rem;
-    }
-
-    .hero-cta {
-      display: inline-block;
-      padding: 0.9rem 2.8rem;
-      background: var(--gold);
-      color: var(--black);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      border: 2px solid var(--gold);
-      transition: all 0.3s;
-    }
-
-    .hero-cta:hover {
-      background: transparent;
-      color: var(--gold);
-    }
-
-    .hero-scroll {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      color: rgba(255,255,255,0.4);
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      animation: bounce 2s infinite;
-    }
-
-    .scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, var(--gold), transparent);
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(6px); }
-    }
-
-    /* ── SECTION BASE ── */
-    section { padding: 7rem 1.5rem; }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.8rem;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
-    }
-
-    .divider {
-      width: 60px;
-      height: 2px;
-      background: var(--gold);
-      margin: 1.5rem 0 2.5rem;
-    }
-
-    /* ── ABOUT ── */
-    #about { background: var(--darker); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    .about-img-wrap {
-      position: relative;
-    }
-
-    .about-img-wrap::before {
-      content: '';
-      position: absolute;
-      top: -12px;
-      left: -12px;
-      right: 12px;
-      bottom: 12px;
-      border: 2px solid var(--gold);
-      opacity: 0.35;
-      z-index: 0;
-    }
-
-    .about-img {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      display: block;
-      filter: grayscale(20%);
-    }
-
-    .about-text p {
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 1.2rem;
-      font-size: 1.0rem;
-    }
-
-    .about-stats {
-      display: flex;
-      gap: 3rem;
-      margin-top: 2.5rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--gold);
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .ig-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--gold);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-top: 2rem;
-      border-bottom: 1px solid rgba(201,160,122,0.3);
-      padding-bottom: 0.2rem;
-      transition: border-color 0.3s;
-    }
-
-    .ig-link:hover { border-color: var(--gold); }
-
-    /* ── GALLERY ── */
-    #gallery { background: var(--black); }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
-    }
-
-    .gallery-item {
-      aspect-ratio: 1;
-      overflow: hidden;
-      position: relative;
+      padding: 6px 12px;
       cursor: pointer;
+      transition: all 0.2s;
     }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease, filter 0.5s ease;
-      filter: grayscale(10%);
+    .lang-toggle:hover { border-color: var(--gold); color: var(--gold); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 1px; background: var(--white); margin: 5px 0; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+    .mobile-menu {
+      display: none; position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
+      background: var(--charcoal); padding: 24px 48px; border-bottom: 1px solid var(--border);
     }
-
-    .gallery-item:hover img {
-      transform: scale(1.07);
-      filter: grayscale(0%);
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; color: var(--white); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    /* FLOATING BOOK */
+    .book-float {
+      position: fixed; bottom: 32px; right: 32px; z-index: 200;
+      background: var(--gold); color: #000;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      text-decoration: none; padding: 14px 22px; border-radius: 2px;
+      box-shadow: 0 4px 24px rgba(201,168,76,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-
-    .gallery-item-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(10,10,10,0.4);
-      opacity: 0;
-      transition: opacity 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
-
-    .gallery-item-overlay span {
-      font-size: 0.65rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 600;
-    }
-
-    /* ── SERVICES ── */
-    #services { background: var(--darker); }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .service-card {
-      padding: 2.5rem 2rem;
-      border: 1px solid rgba(201,160,122,0.15);
-      position: relative;
-      transition: border-color 0.3s;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 40px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .service-card:hover { border-color: rgba(201,160,122,0.4); }
-
-    .service-icon {
-      font-size: 1.8rem;
-      margin-bottom: 1.2rem;
-      display: block;
-    }
-
-    .service-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-    }
-
-    .service-desc {
-      color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.7;
-    }
-
-    /* ── BOOKING CTA ── */
-    #book {
-      background: var(--black);
-      text-align: center;
-      padding: 8rem 1.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    #book::before {
-      content: 'BOOK';
-      position: absolute;
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(8rem, 20vw, 18rem);
-      font-weight: 900;
-      color: rgba(201,160,122,0.04);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      white-space: nowrap;
-    }
-
-    #book .section-title { margin-bottom: 1rem; }
-
-    #book p {
-      color: rgba(255,255,255,0.5);
-      max-width: 500px;
-      margin: 0 auto 3rem;
-      font-size: 1rem;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      padding: 1.1rem 3.5rem;
-      background: var(--gold);
-      color: var(--black);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      border: 2px solid var(--gold);
-      transition: all 0.3s;
-    }
-
-    .cta-btn:hover {
-      background: transparent;
-      color: var(--gold);
-    }
-
-    /* ── CONTACT ── */
-    #contact { background: var(--darker); }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .contact-info p {
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 0.8rem;
-    }
-
-    .contact-detail {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.2rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .contact-detail-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      min-width: 80px;
-      padding-top: 0.1rem;
-    }
-
-    .contact-detail-value {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.95rem;
-    }
-
-    .contact-detail-value a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .contact-detail-value a:hover { color: var(--gold); }
-
-    .contact-cta-side {
-      padding: 3rem;
-      border: 1px solid rgba(201,160,122,0.15);
-      text-align: center;
-    }
-
-    .contact-cta-side .section-title {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-cta-side p {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-    }
-
-    /* ── FOOTER ── */
+    .book-float:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
+    /* FADE-UP ANIMATIONS */
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    /* FOOTER */
     footer {
-      background: var(--black);
-      padding: 2.5rem 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      background: var(--charcoal); padding: 48px 72px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
     }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+    .footer-logo { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--dim); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--dim); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { color: var(--dim); font-size: 0.72rem; }
+    /* SHARED */
+    .section-label { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400; line-height: 1.1; margin-bottom: 24px;
     }
-
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: var(--gold);
-      font-weight: 700;
+    .btn-gold {
+      display: inline-block; background: var(--gold); color: #000;
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 16px 40px;
+      transition: opacity 0.2s;
     }
-
-    .footer-copy {
-      color: rgba(255,255,255,0.3);
-      font-size: 0.75rem;
+    .btn-gold:hover { opacity: 0.88; }
+    .btn-outline {
+      display: inline-block; border: 1px solid var(--border); color: var(--white);
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 14px 36px;
+      transition: border-color 0.2s, color 0.2s;
     }
-
-    /* ── FLOATING BOOK BTN ── */
-    .float-book {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 200;
-      background: var(--gold);
-      color: var(--black);
-      text-decoration: none;
-      padding: 0.85rem 1.8rem;
-      font-weight: 700;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      box-shadow: 0 8px 30px rgba(201,160,122,0.4);
-      transition: all 0.3s;
-      border: 2px solid var(--gold);
-    }
-
-    .float-book:hover {
-      background: var(--black);
-      color: var(--gold);
-      box-shadow: 0 8px 30px rgba(201,160,122,0.2);
-    }
-
-    /* ── HAMBURGER (mobile) ── */
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 4px;
-    }
-
-    .nav-toggle span {
-      display: block;
-      width: 24px;
-      height: 1.5px;
-      background: var(--gold);
-    }
-
-    /* ── RESPONSIVE ── */
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    /* MOBILE */
     @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .about-img-wrap { max-width: 380px; margin: 0 auto; }
-      .services-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      nav { padding: 18px 24px; } .nav-links { display: none; } .hamburger { display: block; }
+      footer { flex-direction: column; gap: 24px; padding: 40px 24px; text-align: center; }
     }
-
     @media (max-width: 600px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-      .nav-toggle { display: flex; }
+      footer { padding: 32px 20px; }
+    }
+  
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; align-items: flex-end;
+      padding: 0 72px 80px; position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('img/1.jpg');
+      background-size: cover; background-position: center top;
+      filter: brightness(0.42); transform: scale(1.02);
+    }
+    .hero-gradient {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.15) 55%, transparent 100%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 700px; }
+    .hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 300; line-height: 0.95; letter-spacing: -0.01em; margin-bottom: 20px;
+    }
+    .hero-sub { font-size: 0.92rem; color: var(--dim); letter-spacing: 0.06em; margin-bottom: 40px; max-width: 480px; line-height: 1.7; }
+    .hero-cta {
+      display: inline-block; border: 1px solid var(--gold); color: var(--gold);
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 14px 32px; transition: background 0.2s, color 0.2s;
+    }
+    .hero-cta:hover { background: var(--gold); color: #000; }
+    .social-row { display: flex; gap: 16px; margin-top: 32px; }
+    .social-row a { color: var(--dim); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
+    .social-row a:hover { color: var(--gold); }
+    /* ABOUT PREVIEW */
+    .about-preview { background: var(--charcoal); padding: 96px 72px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .about-text p { color: var(--dim); line-height: 1.8; margin-bottom: 20px; font-size: 0.95rem; }
+    .about-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; filter: brightness(0.85); transition: filter 0.3s; }
+    .about-img:hover { filter: brightness(1); }
+    .stats-row { display: flex; gap: 48px; margin-top: 40px; }
+    .stat-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.4rem; font-weight: 300; color: var(--gold); }
+    .stat-label { font-size: 0.7rem; color: var(--dim); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+    .about-link { display: inline-block; margin-top: 32px; color: var(--gold); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; border-bottom: 1px solid var(--gold); padding-bottom: 2px; transition: opacity 0.2s; }
+    .about-link:hover { opacity: 0.7; }
+    /* GALLERY PREVIEW */
+    .gallery-section { padding: 96px 72px; background: var(--black); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; max-width: 1200px; margin: 0 auto 48px; }
+    .gallery-item { aspect-ratio: 1; overflow: hidden; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85); transition: filter 0.4s, transform 0.4s; display: block; }
+    .gallery-item:hover img { filter: brightness(1); transform: scale(1.04); }
+    .gallery-cta-wrap { text-align: center; }
+    /* BOOKING PREVIEW */
+    .booking-preview { background: var(--charcoal); padding: 96px 72px; text-align: center; }
+    .booking-preview h2 { max-width: 560px; margin: 0 auto 20px; }
+    .booking-preview p { color: var(--dim); max-width: 480px; margin: 0 auto 36px; font-size: 0.95rem; }
+    /* TESTIMONIALS PREVIEW */
+    .testimonials-preview { padding: 96px 72px; background: var(--black); }
+    .testimonials-preview .inner { max-width: 700px; margin: 0 auto; }
+    .testimonial-placeholder { border: 1px solid var(--border); padding: 48px; text-align: center; }
+    .testimonial-placeholder p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--dim); margin-bottom: 8px; }
+    .testimonial-placeholder small { color: var(--dim); font-size: 0.75rem; letter-spacing: 0.06em; }
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .hero { padding: 0 24px 60px; }
+      .about-preview, .gallery-section, .booking-preview, .testimonials-preview { padding: 72px 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .about-stats { gap: 2rem; }
-      .float-book { bottom: 1.2rem; right: 1.2rem; padding: 0.75rem 1.4rem; }
-      section { padding: 5rem 1.2rem; }
+      .stats-row { gap: 28px; }
+      h1 { font-size: clamp(3rem, 10vw, 6rem); }
     }
-
-    /* Fade-in animation */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
+  
   <nav>
-    <a href="#hero" class="nav-logo">Eric Hare</a>
+    <a href="./index.html" class="nav-logo">Eric Hare</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#book">Book</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="./index.html" class="active"
+        data-en="Inicio" data-es="Inicio">Inicio</a></li>
+      <li><a href="./about.html" 
+        data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</a></li>
+      <li><a href="./tattoos.html" 
+        data-en="Tattoos" data-es="Tatuajes">Tatuajes</a></li>
+      <li><a href="./booking.html" 
+        data-en="Booking" data-es="Reservaciones">Reservaciones</a></li>
+      <li><a href="./testimonials.html" 
+        data-en="Reviews" data-es="Testimonios">Testimonios</a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()">EN</button></li>
     </ul>
-    <div class="nav-toggle" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'">
+    <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open')">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </nav>
+  <div class="mobile-menu">
+    <a href="./index.html" data-en="Home" data-es="Inicio">Inicio</a>
+    <a href="./about.html" data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</a>
+    <a href="./tattoos.html" data-en="Tattoos" data-es="Tatuajes">Tatuajes</a>
+    <a href="./booking.html" data-en="Booking" data-es="Reservaciones">Reservaciones</a>
+    <a href="./testimonials.html" data-en="Reviews" data-es="Testimonios">Testimonios</a>
+  </div>
+  <a href="./booking.html" class="book-float">Reserva</a>
 
   <!-- HERO -->
-  <section id="hero">
+  <section class="hero">
     <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content fade-in visible">
-      <p class="hero-eyebrow">San Diego, CA &nbsp;·&nbsp; The Tattoo Temple</p>
-      <h1 class="hero-title">Eric<br>Hare</h1>
-      <p class="hero-subtitle">Geometric Tattoo Artist &nbsp;·&nbsp; Mandala &nbsp;·&nbsp; Sacred Geometry &nbsp;·&nbsp; Dotwork</p>
-      <a href="https://www.cocreate.ink/artists/ericharetattoo" target="_blank" class="hero-cta">Book a Session</a>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      Scroll
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-up" data-en="Geometr&#xed;a Sagrada" data-es="Geometr&#xed;a Sagrada">Geometr&#xed;a Sagrada &#xb7; Guru Tattoo Little Italy, US</p>
+      <h1 class="fade-up" data-en="Eric Hare" data-es="Eric Hare">Eric Hare</h1>
+      <p class="hero-sub fade-up" data-en="Tatuajes que cuentan tu historia. Basado en Guru Tattoo Little Italy." data-es="Tatuajes que cuentan tu historia. Basado en Guru Tattoo Little Italy.">Tatuajes que cuentan tu historia. Basado en Guru Tattoo Little Italy.</p>
+      <a href="./booking.html" class="hero-cta fade-up" data-en="Reservar Sesi&#xf3;n" data-es="Reservar Sesi&#xf3;n">Reservar Sesi&#xf3;n</a>
+      <div class="social-row fade-up">
+        <a href="https://www.instagram.com/ericharetattoo" target="_blank" rel="noopener">@ericharetattoo</a>
+        <span style="color:var(--border)">&#xb7;</span>
+        <a href="https://www.instagram.com/ericharetattoo">Cont&#xe1;ctame</a>
+      </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-img-wrap fade-in">
-          <img src="https://iili.io/qqK1NB1.jpg" alt="Eric Hare — Geometric Tattoo Artist, San Diego" class="about-img" loading="lazy" />
+  <!-- ABOUT PREVIEW -->
+  <section class="about-preview">
+    <div class="about-grid">
+      <div>
+        <p class="section-label fade-up" data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</p>
+        <h2 class="fade-up">El Arte Detr&#xe1;s del Artista</h2>
+        <div class="about-text">
+          <p class="fade-up">Soy Eric Hare, artista de tatuaje en Guru Tattoo Little Italy.</p>
+          <p class="fade-up">Mi trabajo refleja una pasi&#xf3;n profunda por el arte y la piel como lienzo.</p>
         </div>
-        <div class="about-text fade-in">
-          <p class="section-label">The Artist</p>
-          <h2 class="section-title">Geometry in Ink</h2>
-          <div class="divider"></div>
-          <p>Eric Hare is a geometric tattoo artist based at The Tattoo Temple in San Diego, CA. With a mastery of precision line work, mandala compositions, and sacred geometry, Eric creates tattoos that live on the boundary between mathematics and art.</p>
-          <p>His work spans full sleeves to intricate chest pieces — each design a custom exploration of symmetry, dotwork, and organic pattern. Whether you're drawn to strict geometric structures or flowing mandalas, Eric collaborates closely to bring your vision to life.</p>
-          <p>Every piece is designed for your body, your story, and built to last a lifetime.</p>
-
-          <div class="about-stats">
-            <div>
-              <span class="stat-num">16K+</span>
-              <span class="stat-label">Followers</span>
-            </div>
-            <div>
-              <span class="stat-num">12+</span>
-              <span class="stat-label">Years</span>
-            </div>
-            <div>
-              <span class="stat-num">∞</span>
-              <span class="stat-label">Designs</span>
-            </div>
+        <div class="stats-row fade-up">
+          <div class="stat-item">
+            
           </div>
-
-          <a href="https://www.instagram.com/ericharetattoo/" target="_blank" class="ig-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            @ericharetattoo
-          </a>
+          <div class="stat-item">
+            <div class="stat-num">16.8K</div>
+            <div class="stat-label" data-en="Followers" data-es="Seguidores">Seguidores</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">Geometr&#xed;a</div>
+            <div class="stat-label" data-en="Style" data-es="Estilo">Estilo</div>
+          </div>
         </div>
+        <a href="./about.html" class="about-link fade-up" data-en="Read More &#x2192;" data-es="Leer M&#xe1;s &#x2192;">Leer M&#xe1;s &#x2192;</a>
+      </div>
+      <div>
+        <img src="img/2.jpg" alt="Eric Hare" class="about-img fade-up">
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery">
-    <div class="container">
-      <p class="section-label fade-in">Portfolio</p>
-      <h2 class="section-title fade-in">The Work</h2>
-      <div class="divider fade-in"></div>
+  <!-- GALLERY PREVIEW -->
+  <section class="gallery-section">
+    <div style="max-width:1200px;margin:0 auto 32px;">
+      <p class="section-label fade-up" data-en="Gallery" data-es="Galer&#xed;a">Galer&#xed;a</p>
+      <h2 class="fade-up">Trabajo Reciente</h2>
     </div>
-    <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;">
-      <div class="gallery-grid">
-        <div class="gallery-item fade-in">
-          <img src="https://iili.io/qqK1v2a.jpg" alt="Geometric tattoo by Eric Hare" loading="lazy" />
-          <div class="gallery-item-overlay"><span>Geometric</span></div>
-        </div>
-        <div class="gallery-item fade-in">
-          <img src="https://iili.io/qqK14hN.jpg" alt="Mandala tattoo by Eric Hare" loading="lazy" />
-          <div class="gallery-item-overlay"><span>Mandala</span></div>
-        </div>
-        <div class="gallery-item fade-in">
-          <img src="https://iili.io/qqK16QI.jpg" alt="Sacred geometry tattoo by Eric Hare" loading="lazy" />
-          <div class="gallery-item-overlay"><span>Sacred Geometry</span></div>
-        </div>
-        <div class="gallery-item fade-in">
-          <img src="https://iili.io/qqK1iBt.jpg" alt="Dotwork tattoo by Eric Hare" loading="lazy" />
-          <div class="gallery-item-overlay"><span>Dotwork</span></div>
-        </div>
-        <div class="gallery-item fade-in">
-          <img src="https://iili.io/qqK1sEX.jpg" alt="Sleeve tattoo by Eric Hare" loading="lazy" />
-          <div class="gallery-item-overlay"><span>Sleeve</span></div>
-        </div>
-        <div class="gallery-item fade-in">
-          <img src="https://iili.io/qqK1Z2s.jpg" alt="Geometric sleeve by Eric Hare" loading="lazy" />
-          <div class="gallery-item-overlay"><span>Geometric</span></div>
-        </div>
-        <div class="gallery-item fade-in">
-          <img src="https://iili.io/qqK1pTl.jpg" alt="Mandala sleeve by Eric Hare" loading="lazy" />
-          <div class="gallery-item-overlay"><span>Mandala</span></div>
-        </div>
-        <div class="gallery-item fade-in">
-          <img src="https://iili.io/qqKEF3u.jpg" alt="Dotwork mandala by Eric Hare" loading="lazy" />
-          <div class="gallery-item-overlay"><span>Dotwork</span></div>
-        </div>
-        <div class="gallery-item fade-in">
-          <img src="https://iili.io/qqKEfvj.jpg" alt="Geometric pattern by Eric Hare" loading="lazy" />
-          <div class="gallery-item-overlay"><span>Pattern</span></div>
-        </div>
-      </div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="img/1.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/2.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/3.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/4.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/5.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/6.jpg" alt="Eric Hare tattoo" loading="lazy"></div>
     </div>
-  </section>
-
-  <!-- PODCAST -->
-  <section id="podcast" style="padding:6rem 1.5rem; background:#0a0a0a; text-align:center;">
-    <div class="container" style="max-width:700px; margin:0 auto;">
-      <p class="section-label fade-in">Listen</p>
-      <h2 class="section-title fade-in" style="margin-bottom:1rem;">Sacred G Podcast</h2>
-      <div class="divider" style="margin:0 auto 1.5rem;"></div>
-      <p style="color:rgba(255,255,255,0.65); font-size:1.05rem; margin-bottom:2.5rem;">Conversations about geometry, mindfulness, and the art of tattooing.</p>
-      <img src="https://iili.io/qqK1NB1.jpg" alt="Sacred G Podcast" style="width:220px; height:220px; object-fit:cover; border:3px solid #c9a84c; margin-bottom:2.5rem; display:block; margin-left:auto; margin-right:auto;" />
-      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-        <a href="https://www.youtube.com/@ericharetattoo" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.85rem 2rem; border:1px solid #c9a84c; color:#c9a84c; text-decoration:none; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; transition:all 0.2s;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.3-1.9-1.1-2.7c-1.1-1.1-2.3-1.1-2.8-1.2C16.8 2 12 2 12 2s-4.8 0-7.6.3c-.6.1-1.8.1-2.8 1.2C.8 4.3.5 6.2.5 6.2S.2 8.4.2 10.6v2.1c0 2.2.3 4.4.3 4.4s.3 1.9 1.1 2.7c1.1 1.1 2.5 1.1 3.1 1.2C6.8 21.2 12 21.2 12 21.2s4.8 0 7.6-.3c.6-.1 1.8-.1 2.8-1.2.8-.8 1.1-2.7 1.1-2.7s.3-2.2.3-4.4v-2.1c0-2.2-.3-4.4-.3-4.4zM9.7 14.8V8.6l6.6 3.1-6.6 3.1z"/></svg>
-          YouTube
-        </a>
-        <a href="https://open.spotify.com/search/Sacred%20G%20Podcast%20Eric%20Hare" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.85rem 2rem; border:1px solid #c9a84c; color:#c9a84c; text-decoration:none; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; transition:all 0.2s;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.54-1.26.24-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-.99-.12-1.11-.6-.12-.48.12-.99.6-1.11 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.21 1.23zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.54.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
-          Spotify
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <p class="section-label fade-in">What I Do</p>
-      <h2 class="section-title fade-in">Specialties</h2>
-      <div class="divider fade-in"></div>
-      <div class="services-grid">
-        <div class="service-card fade-in">
-          <span class="service-icon">◈</span>
-          <h3 class="service-title">Geometric & Mandala</h3>
-          <p class="service-desc">Precision geometric compositions and mandala designs built from sacred ratios and symmetry. From small wrist pieces to full back work.</p>
-        </div>
-        <div class="service-card fade-in">
-          <span class="service-icon">⬡</span>
-          <h3 class="service-title">Sacred Geometry</h3>
-          <p class="service-desc">Flower of Life, Metatron's Cube, Sri Yantra, and custom sacred geometry compositions with deep symbolic meaning and flawless execution.</p>
-        </div>
-        <div class="service-card fade-in">
-          <span class="service-icon">∷</span>
-          <h3 class="service-title">Dotwork & Sleeves</h3>
-          <p class="service-desc">Full and half sleeves combining dotwork shading with linework geometry. Cohesive, flowing designs built to wrap your body perfectly.</p>
-        </div>
-      </div>
+    <div class="gallery-cta-wrap fade-up">
+      <a href="./tattoos.html" class="btn-outline" data-en="View Full Gallery &#x2192;" data-es="Ver Galer&#xed;a Completa &#x2192;">Ver Galer&#xed;a Completa &#x2192;</a>
     </div>
   </section>
 
   <!-- BOOKING CTA -->
-  <section id="book">
-    <div class="container">
-      <p class="section-label fade-in">Ready?</p>
-      <h2 class="section-title fade-in">Let's Create<br>Something Permanent</h2>
-      <p class="fade-in">Booking is open for custom designs. Submit your inquiry through CoCreate and Eric will reach out to discuss your vision.</p>
-      <a href="https://www.cocreate.ink/artists/ericharetattoo" target="_blank" class="cta-btn fade-in">Request a Booking</a>
-    </div>
+  <section class="booking-preview">
+    <p class="section-label fade-up" data-en="Book a Session" data-es="Reserva tu Sesi&#xf3;n">Reserva tu Sesi&#xf3;n</p>
+    <h2 class="fade-up">&#xbf;Listo para tu pr&#xf3;ximo tatuaje?</h2>
+    <p class="fade-up" data-en="Let's create something meaningful together." data-es="Creemos algo significativo juntos.">Creemos algo significativo juntos.</p>
+    <a href="./booking.html" class="btn-gold fade-up" data-en="Reservar Sesi&#xf3;n" data-es="Reservar Sesi&#xf3;n">Reservar Sesi&#xf3;n</a>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div>
-          <p class="section-label fade-in">Find Me</p>
-          <h2 class="section-title fade-in">Contact</h2>
-          <div class="divider fade-in"></div>
-
-          <div class="contact-detail fade-in">
-            <span class="contact-detail-label">Studio</span>
-            <span class="contact-detail-value">
-              <a href="https://www.instagram.com/thetattoo_temple/" target="_blank">The Tattoo Temple</a>
-            </span>
-          </div>
-          <div class="contact-detail fade-in">
-            <span class="contact-detail-label">Location</span>
-            <span class="contact-detail-value">San Diego, CA</span>
-          </div>
-          <div class="contact-detail fade-in">
-            <span class="contact-detail-label">Instagram</span>
-            <span class="contact-detail-value">
-              <a href="https://www.instagram.com/ericharetattoo/" target="_blank">@ericharetattoo</a>
-            </span>
-          </div>
-          <div class="contact-detail fade-in">
-            <span class="contact-detail-label">Booking</span>
-            <span class="contact-detail-value">
-              <a href="https://www.cocreate.ink/artists/ericharetattoo" target="_blank">cocreate.ink</a>
-            </span>
-          </div>
-        </div>
-
-        <div class="contact-cta-side fade-in">
-          <h3 class="section-title">Start Your<br>Journey</h3>
-          <p>Custom geometric work takes time and intention. Reach out early to secure your spot.</p>
-          <a href="https://www.cocreate.ink/artists/ericharetattoo" target="_blank" class="cta-btn">Book Now</a>
-        </div>
+  <!-- TESTIMONIALS PREVIEW -->
+  <section class="testimonials-preview">
+    <div class="inner">
+      <p class="section-label fade-up" data-en="Reviews" data-es="Testimonios">Testimonios</p>
+      <h2 class="fade-up">Lo Que Dicen</h2>
+      <div class="testimonial-placeholder fade-up">
+        <p data-en="Be the first to share your experience." data-es="S&#xe9; el primero en compartir tu experiencia.">S&#xe9; el primero en compartir tu experiencia.</p>
+        <small><a href="./testimonials.html" style="color:var(--gold);text-decoration:none;" data-en="Share your story &#x2192;" data-es="Comparte tu historia &#x2192;">Comparte tu historia &#x2192;</a></small>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  
   <footer>
-    <div class="footer-inner">
-      <span class="footer-logo">Eric Hare</span>
-      <span class="footer-copy">© 2025 Eric Hare. San Diego, CA.</span>
-      <span>
-        <a href="https://bayouwebstudio.com" target="_blank" style="color:inherit;text-decoration:none;opacity:0.5;font-size:12px;">Powered by BWS</a>
-      </span>
+    <div class="footer-logo">Eric Hare</div>
+    <div class="footer-links">
+      <a href="./index.html">Inicio</a>
+      <a href="./about.html">Sobre M&#xed;</a>
+      <a href="./tattoos.html">Tatuajes</a>
+      <a href="./booking.html">Reservaciones</a>
+      <a href="https://www.instagram.com/ericharetattoo" target="_blank" rel="noopener">Instagram</a>
+      
     </div>
+    <div class="footer-copy">&#xa9; 2026 Eric Hare</div>
   </footer>
-
-  <!-- FLOATING BOOK BUTTON -->
-  <a href="https://www.cocreate.ink/artists/ericharetattoo" target="_blank" class="float-book">Book Now</a>
-
+  
   <script>
-    // Intersection Observer for fade-in
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+    const LANG = { default: 'es', current: 'es' };
+    function toggleLang() {
+      LANG.current = LANG.current === 'es' ? 'en' : 'es';
+      document.querySelectorAll('[data-es][data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + LANG.current) || el.textContent;
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
-
-    // Hide float button near footer
-    const floatBtn = document.querySelector('.float-book');
-    window.addEventListener('scroll', () => {
-      const footer = document.querySelector('footer');
-      const footerTop = footer.getBoundingClientRect().top;
-      floatBtn.style.opacity = footerTop < 120 ? '0' : '1';
-    });
+      document.querySelectorAll('[data-es-href][data-en-href]').forEach(el => {
+        el.setAttribute('href', el.getAttribute('data-' + LANG.current + '-href') || el.getAttribute('href'));
+      });
+    }
+    // Fade-up on scroll
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
   </script>
 </body>
 </html>
