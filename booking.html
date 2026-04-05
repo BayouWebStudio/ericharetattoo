@@ -231,16 +231,14 @@
       </div>
       <div class="form-panel">
         <h2 class="fade-up" data-en="Send an Inquiry" data-es="Enviar una Consulta">Send an Inquiry</h2>
-        <form action="https://formsubmit.co/ericharetattoo@gmail.com" method="POST" class="fade-up">
-          <input type="hidden" name="_subject" value="Nueva consulta de tatuaje">
-          <input type="hidden" name="_captcha" value="false">
+        <form onsubmit="handleBooking(event)" class="fade-up">
           <div class="form-group">
             <label data-en="Name" data-es="Nombre">Name</label>
-            <input type="text" name="name" required placeholder="Tu nombre">
+            <input type="text" id="b-name" name="name" required placeholder="Tu nombre">
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" name="email" required placeholder="tu@email.com">
+            <input type="email" id="b-email" name="email" required placeholder="tu@email.com">
           </div>
           <div class="form-group">
             <label data-en="Phone (optional)" data-es="Tel&#xe9;fono (opcional)">Phone (optional)</label>
@@ -248,11 +246,11 @@
           </div>
           <div class="form-group">
             <label data-en="Placement" data-es="Ubicaci&#xf3;n">Placement</label>
-            <input type="text" name="placement" required placeholder="Brazo, espalda, pierna...">
+            <input type="text" id="b-placement" name="placement" required placeholder="Brazo, espalda, pierna...">
           </div>
           <div class="form-group">
             <label data-en="Your Vision" data-es="Tu Visi&#xf3;n">Your Vision</label>
-            <textarea name="vision" rows="5" required placeholder="Describe tu idea de tatuaje..."></textarea>
+            <textarea id="b-vision" name="vision" rows="5" required placeholder="Describe tu idea de tatuaje..."></textarea>
           </div>
           <div class="form-group">
             <label data-en="References (optional)" data-es="Referencias (opcional)">References (optional)</label>
@@ -300,6 +298,37 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  </script>
+
+  <script>
+  async function handleBooking(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('button[type="submit"]') || e.target.querySelector('.btn-submit');
+    var origText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    try {
+      var name = document.getElementById('b-name').value.trim();
+      var email = document.getElementById('b-email').value.trim();
+      var phone = (document.getElementById('b-phone') || {}).value || '';
+      var service = (document.getElementById('b-placement') || {}).value || '';
+      var message = document.getElementById('b-vision').value.trim();
+      if (!name || !email || !message) { alert('Please fill in all required fields.'); btn.disabled = false; btn.textContent = origText; return; }
+      var res = await fetch('https://curious-lemming-262.convex.site/api/booking/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug: 'ericharetattoo', name: name, email: email, phone: phone || undefined, service: service || undefined, message: message })
+      });
+      if (!res.ok) throw new Error('Network error');
+      e.target.reset();
+      btn.textContent = '\u2713 Sent!';
+      setTimeout(function() { btn.textContent = origText; btn.disabled = false; }, 3000);
+    } catch(err) {
+      alert('Something went wrong. Please try again.');
+      btn.textContent = origText;
+      btn.disabled = false;
+    }
+  }
   </script>
 </body>
 </html>
